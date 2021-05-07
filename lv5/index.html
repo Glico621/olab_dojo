@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>レベル5</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script>
+    function twoDigits(num) {
+        let ret;
+        if( num < 10 )
+            ret = "0" + num;
+        else
+            ret = num;
+        return ret;
+    }
+    function showClock() {
+        let nowTime = new Date();
+        let hour = twoDigits( nowTime.getHours() );
+        let min  = twoDigits( nowTime.getMinutes() );
+        let sec  = twoDigits( nowTime.getSeconds() );
+        let nowIs  =  + hour + ":" + min + ":" + sec;
+        document.getElementById("realTime").innerHTML = nowIs;
+    }
+    setInterval('showClock()',1000);
+</script>
+</head>
+
+<body>
+<header>
+    <h1>デジタル時計くん</h1>
+</header>
+
+<section>
+<article>
+    <span class="date"></span>
+    <h2></h2>
+    <p id="realTime" class="shadow"></p>
+</article>
+</section>
+<footer>
+<address></address>
+</footer>
+</body>
+</html>
