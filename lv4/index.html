@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>レベル4</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+    <h1>足し算くん</h1>
+</header>
+<nav>
+</nav>
+<section>
+<article>
+    <form name="myform">
+        <p>
+            <div class="cp_iptxt">
+                <input class="ef" type="text" name="a" placeholder="数字を入力">
+                <label>数字を入力</label>
+                <span class="focus_line"><i></i></span>
+            </div>
+            +
+            <div class="cp_iptxt">
+                <input class="ef" type="text" name="b" placeholder="数字を入力">
+                <label>数字を入力</label>
+                <span class="focus_line"><i></i></span>
+            </div>
+            =
+            <div class="cp_iptxt">
+                <input class="ef" type="text" name="ans" placeholder="演算結果">
+                <label>演算結果</label>
+                <span class="focus_line"><i></i></span>
+            </div>
+            <br>
+            <input type="button" class="btn-gradient-3d-orange" value="計算ボタン" onclick="ans.value=Number(a.value) + Number(b.value)" >
+        </p>
+    </form>
+</article>
+</section>
+<footer>
+<address></address>
+</footer>
+</body>
+</html>
