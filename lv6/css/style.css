@@ -8,6 +8,7 @@
     color: black;
 }
 
+/*見出し*/
 h1 {
     position: relative;
     padding: 1.5rem 2rem;
@@ -15,7 +16,6 @@ h1 {
     border-radius: 10px;
     background: #f9f9f9;
 }
-
 h1:before {
     position: absolute;
     bottom: -14px;
@@ -27,7 +27,6 @@ h1:before {
     border-style: solid;
     border-color: #d8d8d8 transparent transparent transparent;
 }
-
 h1:after {
     position: absolute;
     bottom: -10px;
@@ -40,36 +39,59 @@ h1:after {
     border-color: #f9f9f9 transparent transparent transparent;
 }
 
-#first {
-    margin: 20px;
+/*左右に分割する処理*/
+#contents {
+    width:100vh;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-nav {
-    margin: 40px;
-}
-
-p {
+#sub {
+    float: left;
+    width: 250px;
+    height: 100vh;
+    margin-right:auto;
+    margin-top: 30px;
     margin-left: 30px;
+    padding-right: 10px;
+    position: relative;
+    z-index: 2;
+    min-height: 300px;
+}
+#main {
+    padding-top: 10px;
+    float: left;
+    width: 70%;
+    margin-left: auto;
+    min-height: 300px;
+}
+#main .inner {
+    width: auto;
+    position: relative;
+    z-index: 1;
 }
 
+/*中央リスト*/
 ul {
+    width:50vh;
     color: #1e366a;
     border-top: solid #1e366a 1px;/*上のボーダー*/
     border-bottom: solid #1e366a 1px;/*下のボーダー*/
     padding: 0.5em 0 0.5em 1.5em;
+    padding-left: 100px;
 }
-
 ul li {
     line-height: 1.5;
     padding: 0.5em 0;
 }
 
+/*スライドショー*/
 div.slide-show {
-    width: 640px; /* スライドショーの幅 */
+    width: 400px; /* スライドショーの幅 */
     max-width: 100%; /* スマホで表示が欠けないように */
-    margin: 10px auto; /* 中央揃え */
+    margin-left: 100px; /* 中央揃え */
     position: relative;
     padding:0 !important;
+    margin-top: 50px;
 }
 
 .slide-show img {
@@ -104,6 +126,41 @@ div.slide-show {
 
 .slide-show img:nth-of-type(4) {
     animation-delay: 8s;
+}
+
+/*アコーディングメニュー*/
+.acd-check{
+    display: none;
+}
+.acd-label{
+    background:#93D1F3;
+    color:black;
+    display: block;
+    margin-bottom: 1px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.acd-content{
+    border: 1px solid #333;
+    height: 0;
+    opacity: 0;
+    padding: 0 10px;
+    transition: .5s;
+    visibility: hidden;
+}
+.acd-check:checked + .acd-label + .acd-content{
+    height: 20px;
+    opacity: 1;
+    padding: 10px;
+    visibility: visible;
+}
+
+.baseball {
+    padding-top: 20px;
+}
+
+iframe {
+    padding-left: 30px;
 }
 
 footer {
