@@ -24,6 +24,18 @@ p {
     margin-left: 30px;
 }
 
+ul {
+    color: #1e366a;
+    border-top: solid #1e366a 1px;/*上のボーダー*/
+    border-bottom: solid #1e366a 1px;/*下のボーダー*/
+    padding: 0.5em 0 0.5em 1.5em;
+}
+
+ul li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
 div.slide-show {
     width: 640px; /* スライドショーの幅 */
     max-width: 100%; /* スマホで表示が欠けないように */
