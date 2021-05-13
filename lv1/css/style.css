@@ -10,6 +10,8 @@
 
 h1 {
     text-align: center;
+    margin: 40px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #first {
@@ -25,6 +27,8 @@ p {
 }
 
 ul {
+    width: 40vh;
+    margin-left: 30vh;
     color: #1e366a;
     border-top: solid #1e366a 1px;/*上のボーダー*/
     border-bottom: solid #1e366a 1px;/*下のボーダー*/
