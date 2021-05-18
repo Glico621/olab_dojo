@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+    color: #432;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
+    height: auto;
+}
+
+h1 {
+    margin-bottom: 10%;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.contents {
+    text-align: center;
+    margin: 10%;
+}
+
+.list {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+}
+.list li {
+    margin-right: 50px;
+}
+
+footer {
+    background:lightgray;
+    text-align: center;
+    padding: 3px 0;
+}
+footer p {
+    color: black;
+}
+
+#overall {
+    margin-bottom: 40px;
+}
+

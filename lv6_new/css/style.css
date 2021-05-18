@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+    color: #432;
+}
+
+header {
+    background: url(../images/penguins.jpeg) center top/cover no-repeat;
+    height: 200px;
+}
+
+h1 {
+    margin-bottom: 10%;
+    font-size: 40px;
+}
+
+ul, dt {
+    list-style: none;
+    display: inline-block;
+}
+
+article {
+    width: 74%;
+}
+
+aside {
+    width: 22%;
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10%;
+}
+
+.topix_name {
+    margin-bottom: 0;
+}
+
+
+
+#overall {
+    margin-bottom: 40px;
+}
+
+#mini {
+    max-width: 100%;
+    border-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
+    height: auto;
+}
+
+.side_title {
+    font-size: 20px;
+    padding: 0 8px 8px;
+    border-bottom: 2px skyblue solid;
+    margin: 30px 30px ;
+}
+.side_menu {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.parent {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background-color: lightblue;
+    cursor: pointer;
+}
+.child {
+    display: none;
+    padding: 2em 1em;
+    background-color: black;
+}
+
+.sakana {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background:lightgray;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p {
+    color: black;
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    article, aside {
+        width: 100%;
+    }
+}
