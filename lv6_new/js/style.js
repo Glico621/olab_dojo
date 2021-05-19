@@ -1,5 +1,5 @@
-$(function () {
-        $('parent').on('click', function() {
+$(function() {
+        $('#side_menu dt').on('click', function() {
         $(this).next().slideToggle();
     });
 });
