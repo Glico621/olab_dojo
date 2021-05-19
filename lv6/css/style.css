@@ -1,176 +1,111 @@
-@charset "Shift_jis";
+@charset "UTF-8";
 
-* {
-    margin: 0; padding: 0;
-
-    background-color:aliceblue;
-    background-blend-mode: hard-light;
-    color: black;
+html {
+    font-size: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-/*見出し*/
+body {
+    color: #432;
+}
+
+header {
+    background: url(../images/penguins.jpeg) center top/cover no-repeat;
+    height: 200px;
+}
+
 h1 {
-    position: relative;
-    padding: 1.5rem 2rem;
-    border: 3px solid #d8d8d8;
-    border-radius: 10px;
-    background: #f9f9f9;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-h1:before {
-    position: absolute;
-    bottom: -14px;
-    left: 1em;
-    width: 0;
-    height: 0;
-    content: '';
-    border-width: 14px 12px 0 12px;
-    border-style: solid;
-    border-color: #d8d8d8 transparent transparent transparent;
-}
-h1:after {
-    position: absolute;
-    bottom: -10px;
-    left: 1em;
-    width: 0;
-    height: 0;
-    content: '';
-    border-width: 14px 12px 0 12px;
-    border-style: solid;
-    border-color: #f9f9f9 transparent transparent transparent;
+    margin-bottom: 10%;
+    font-size: 40px;
 }
 
-/*左右に分割する処理*/
-#contents {
-    display: block;
-    width:100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-#sub {
-    float: left;
-    width: 20%;
-    height: 100vh;
-    margin-right:auto;
-    margin-top: 30px;
-    margin-left: 30px;
-    padding-right: 10px;
-    position: relative;
-}
-#main {
-    float: left;
-    width: 70%;
-    margin-left: auto;
-    min-height: 300px;
-    margin-top: 20px;
-}
-#main .inner {
-    width: auto;
-    position: relative;
-
+ul, dt, dd {
+    list-style: none;
+    display: inline-block;
 }
 
-/*中央リスト*/
-ul {
-    width:40vh;
-    color: #1e366a;
-    border-top: solid #1e366a 1px;/*上のボーダー*/
-    border-bottom: solid #1e366a 1px;/*下のボーダー*/
-    padding: 0.5em 0 0.5em 1.5em;
-    padding-left: 100px;
+/*画面左右分割*/
+article {
+    width: 74%;
 }
-ul li {
-    line-height: 1.5;
-    padding: 0.5em 0;
+aside {
+    width: 22%;
 }
-
-/*スライドショー*/
-div.slide-show {
-    width: 400px; /* スライドショーの幅 */
-    max-width: 100%; /* スマホで表示が欠けないように */
-    margin: 10px auto; /* 中央揃え */
-    position: relative;
+.contents {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10%;
 }
 
-.slide-show img {
-    animation: show 12s infinite; /* 12秒のスライドショーを繰り返し */
+.topix_name {
+    margin-bottom: 0;
+}
+
+#overall {
+    margin-bottom: 40px;
+}
+
+/*左写真*/
+#mini {
     max-width: 100%;
+    border-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
     height: auto;
-    opacity: 0;
-    position: absolute; /* 画像を重ねて表示 */
-    left: 0;
-    top: 0;
-    border-radius: 30px;
 }
 
-@keyframes show {
-    0% {opacity: 0}
-    17% {opacity: 1}
-    33% {opacity: 1}
-    50% {opacity: 0}
+/*右メニュータイトル*/
+.side_title {
+    font-size: 20px;
+    padding: 0 8px 8px;
+    border-bottom: 2px skyblue solid;
+    margin: 30px 30px ;
 }
 
-.slide-show img:nth-of-type(1) {
-    position: relative;
+/*右メニュー*/
+#side_menu {
+    width: 100%;
+    margin: 0 auto;
 }
-
-.slide-show img:nth-of-type(2) {
-    animation-delay: 0s;
+#side_menu dt{
+    height: 50px;
+    width: 70%;
+    border-bottom: 1px solid #fff;
+    background-color: lightblue;
+    cursor: pointer;
+    border-radius: 10%;
+    margin-top: 10px;
 }
-
-.slide-show img:nth-of-type(3) {
-    animation-delay: 4s;
-}
-
-.slide-show img:nth-of-type(4) {
-    animation-delay: 8s;
-}
-
-/*アコーディングメニュー*/
-.acd-check{
+#side_menu dd{
     display: none;
-}
-.acd-label{
-    background:#93D1F3;
-    color:black;
-    display: block;
-    margin-bottom: 1px;
-    padding: 10px;
-    margin-right: 10px;
-}
-.acd-content{
-    border: 1px solid #333;
-    height: 0;
-    opacity: 0;
-    padding: 0 10px;
-    transition: .5s;
-    visibility: hidden;
-}
-.acd-check:checked + .acd-label + .acd-content{
-    height: 20px;
-    opacity: 1;
-    padding: 10px;
-    visibility: visible;
+    width: 100%;
+    padding: 2em 1em;
+    background-color: lightgray;
+    border-radius: 10%;
 }
 
-.baseball {
-    padding-top: 20px;
-}
-
-iframe {
-    padding-left: 30px;
+/*ようつべリンク*/
+.sakana {
+    width: 100%;
+    height: auto;
 }
 
 footer {
-    position: absolute;
+    background:lightgray;
     text-align: center;
-    bottom: 0;
-    position: fixed;
-    bottom: 0px;
-    margin:0 auto;
-    height: 60px;
-    width:100%;
-    background-image: linear-gradient(-135deg, transparent 50%, #6AC5F6 50%), linear-gradient(-45deg, #93D1F3 50%, transparent 50%);
-    background-size: 50px 50px;
-    z-index: 3;
+    padding: 10px 0;
+}
+footer p {
+    color: black;
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    article, aside {
+        width: 100%;
+    }
 }
