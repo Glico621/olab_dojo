@@ -56,6 +56,12 @@ aside {
     height: auto;
 }
 
+#boy {
+    margin-top: 20px;
+    height: 300px;
+    width: auto;
+}
+
 /*右メニュータイトル*/
 .side_title {
     font-size: 20px;
