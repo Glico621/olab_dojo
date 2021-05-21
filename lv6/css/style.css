@@ -3,6 +3,7 @@
 html {
     font-size: 100%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #f2f2f2;
 }
 
 body {
@@ -27,6 +28,8 @@ ul, dt, dd {
 /*画面左右分割*/
 article {
     width: 74%;
+    background-color: #f8f8f8;
+    border-radius: 30px;
 }
 aside {
     width: 22%;
